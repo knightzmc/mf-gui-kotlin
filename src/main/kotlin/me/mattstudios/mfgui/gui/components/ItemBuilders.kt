@@ -6,11 +6,11 @@ import org.bukkit.inventory.ItemFlag
 import org.bukkit.inventory.ItemStack
 
 fun buildItem(type: Material, function: ItemBuilder.() -> Unit = {}): ItemBuilder {
-    return ItemBuilder(type).apply(function)
+    return ItemBuilder.from(type).apply(function)
 }
 
 fun buildItem(type: ItemStack, function: ItemBuilder.() -> Unit = {}): ItemBuilder {
-    return ItemBuilder(type).apply(function)
+    return ItemBuilder.from(type).apply(function)
 }
 
 fun createItem(type: Material, function: ItemBuilder.() -> Unit = {}): ItemStack {
