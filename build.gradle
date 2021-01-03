@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'me.bristermitten'
-version '1.0-SNAPSHOT'
+version '2.0.2'
 
 repositories {
     mavenCentral()
@@ -12,15 +12,16 @@ repositories {
         url 'https://hub.spigotmc.org/nexus/content/groups/public/'
     }
     maven { url 'https://jitpack.io' }
+    mavenLocal()
 }
 
 dependencies {
     implementation "me.mattstudios.utils:matt-framework-gui:2.0.2"
-    compileOnly 'org.spigotmc:spigot-api:+'
+    compileOnly 'org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT'
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'com.github.knightzmc:MockBukkit:7ef4b0be64'
-    testCompileOnly 'org.spigotmc:spigot-api:+'
+    testCompileOnly 'org.spigotmc:spigot:1.16.4-R0.1-SNAPSHOT'
 }
 
 compileKotlin {
