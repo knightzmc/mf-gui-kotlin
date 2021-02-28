@@ -6,11 +6,11 @@ plugins {
 group 'me.bristermitten'
 version '2.0.2'
 
+sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
+
 repositories {
     mavenCentral()
-    maven {
-        url 'https://hub.spigotmc.org/nexus/content/groups/public/'
-    }
+    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
     maven { url 'https://jitpack.io' }
     mavenLocal()
 }
@@ -35,7 +35,6 @@ task sourcesJar(type: Jar, dependsOn: classes) {
     archiveClassifier.set('sources')
     from sourceSets.main.allSource
 }
-
 
 publishing {
     repositories {
