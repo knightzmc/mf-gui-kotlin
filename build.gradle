@@ -10,14 +10,14 @@ sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 
 repositories {
     mavenCentral()
-    maven { url 'https://hub.spigotmc.org/nexus/content/groups/public/' }
+    maven { url 'https://papermc.io/repo/repository/maven-public/' }
     maven { url 'https://jitpack.io' }
     mavenLocal()
 }
 
 dependencies {
     implementation "me.mattstudios.utils:matt-framework-gui:2.0.2"
-    compileOnly 'org.spigotmc:spigot-api:1.16.4-R0.1-SNAPSHOT'
+    compileOnly 'com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT'
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'com.github.knightzmc:MockBukkit:7ef4b0be64'
