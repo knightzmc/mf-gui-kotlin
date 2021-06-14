@@ -1,5 +1,7 @@
-package me.mattstudios.mfgui.gui.components
+package dev.triumphteam.gui.components
 
+import dev.triumphteam.gui.builder.item.ItemBuilder
+import dev.triumphteam.gui.components.util.ItemNbt
 import org.bukkit.inventory.ItemStack
 
 class NBTBuilderContainer(private val itemBuilder: ItemBuilder) {
@@ -11,11 +13,11 @@ class NBTBuilderContainer(private val itemBuilder: ItemBuilder) {
 
 class NBTContainer(private val item: ItemStack) {
     operator fun set(key: String, value: String) {
-        ItemNBT.setNBTTag(item, key, value)
+        ItemNbt.setString(item, key, value)
     }
 
     operator fun get(key: String): String {
-        return ItemNBT.getNBTTag(item, key)
+        return ItemNbt.getString(item, key)
     }
 }
 
