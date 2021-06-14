@@ -1,5 +1,6 @@
 package me.mattstudios.mfgui.gui.guis
 
+import dev.triumphteam.gui.guis.GuiItem
 import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.inventory.ItemStack
 

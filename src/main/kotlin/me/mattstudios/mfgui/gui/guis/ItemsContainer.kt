@@ -1,5 +1,8 @@
 package me.mattstudios.mfgui.gui.guis
 
+import dev.triumphteam.gui.guis.BaseGui
+import dev.triumphteam.gui.guis.GuiItem
+
 class ItemsContainer(private val gui: BaseGui) {
     operator fun get(slot: Int): GuiItem? {
         return gui.getGuiItem(slot)
