@@ -1,5 +1,6 @@
-package me.mattstudios.mfgui.gui.components
+package dev.triumphteam.gui.components
 
+import dev.triumphteam.gui.builder.item.ItemBuilder
 import org.bukkit.Material
 import org.bukkit.OfflinePlayer
 import org.bukkit.inventory.ItemFlag
@@ -21,6 +22,7 @@ fun createItem(type: ItemStack, function: ItemBuilder.() -> Unit = {}): ItemStac
     return buildItem(type, function).build()
 }
 
+@Deprecated("in favour of components")
 var ItemBuilder.name: String
     get() = throwUOE("name")
     set(value) {
@@ -30,25 +32,26 @@ var ItemBuilder.name: String
 var ItemBuilder.amount: Int
     get() = throwUOE("amount")
     set(value) {
-        setAmount(value)
+        amount(value)
     }
 
+@Deprecated("in favour of components")
 var ItemBuilder.lore: List<String>
     get() = throwUOE("lore")
     set(value) {
-        this.setLore(value)
+        setLore(value)
     }
 
 var ItemBuilder.flags: List<ItemFlag>
     get() = throwUOE("flags")
     set(value) {
-        this.addItemFlags(*value.toTypedArray())
+        flags(*value.toTypedArray())
     }
 
 var ItemBuilder.unbreakable: Boolean
     get() = throwUOE("unbreakable")
     set(value) {
-        this.setUnbreakable(value)
+        unbreakable(value)
     }
 
 var ItemBuilder.glow: Boolean
@@ -60,13 +63,13 @@ var ItemBuilder.glow: Boolean
 var ItemBuilder.skullTexture: String
     get() = throwUOE("skullTexture")
     set(value) {
-        setSkullTexture(value)
+        ItemBuilder.skull().texture(value)
     }
 
 var ItemBuilder.skullOwner: OfflinePlayer
     get() = throwUOE("skullOwner")
     set(value) {
-        setSkullOwner(value)
+        ItemBuilder.skull().owner(value)
     }
 
 fun ItemBuilder.nbt(nbtSetter: NBTBuilderContainer.() -> Unit) {

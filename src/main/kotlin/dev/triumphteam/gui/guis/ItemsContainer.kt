@@ -1,4 +1,4 @@
-package me.mattstudios.mfgui.gui.guis
+package dev.triumphteam.gui.guis
 
 class ItemsContainer(private val gui: BaseGui) {
     operator fun get(slot: Int): GuiItem? {

@@ -1,5 +1,5 @@
 package me.mattstudios.mfgui.gui.components
-
+/**
 import be.seeseemelk.mockbukkit.MockBukkit
 import me.mattstudios.mfgui.gui.guis.gui
 import me.mattstudios.mfgui.gui.guis.items
@@ -47,3 +47,4 @@ class ItemBuilderTests {
 //        assertEquals(item.enchantments[ARROW_DAMAGE], 3)
 //    }
 }
+*/

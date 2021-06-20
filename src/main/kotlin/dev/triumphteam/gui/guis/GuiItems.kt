@@ -1,4 +1,4 @@
-package me.mattstudios.mfgui.gui.guis
+package dev.triumphteam.gui.guis
 
 import org.bukkit.event.inventory.InventoryClickEvent
 import org.bukkit.inventory.ItemStack
