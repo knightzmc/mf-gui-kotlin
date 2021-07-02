@@ -22,7 +22,6 @@ dependencies {
 
     testImplementation 'junit:junit:4.12'
     testImplementation 'com.github.knightzmc:MockBukkit:7ef4b0be64'
-    testCompileOnly 'org.spigotmc:spigot:1.16.4-R0.1-SNAPSHOT'
 }
 
 compileKotlin {
