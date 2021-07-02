@@ -19,7 +19,7 @@ fun gui(
     title: Component,
     apply: Gui.() -> Unit = emptyFunction()
 ): Gui {
-    return Gui(rows, title).apply(apply)
+    return Gui.gui().rows(rows).title(title).create().apply(apply)
 }
 
 @Deprecated(message = "In favor of components")
@@ -36,7 +36,7 @@ fun paginatedGui(
     title: Component,
     apply: PaginatedGui.() -> Unit = emptyFunction()
 ): PaginatedGui {
-    return PaginatedGui(rows, title).apply(apply)
+    return Gui.paginated().rows(rows).title(title).create().apply(apply)
 }
 
 @Deprecated(message = "In favor of components")
@@ -53,7 +53,7 @@ fun storageGui(
     title: Component,
     apply: StorageGui.() -> Unit = emptyFunction()
 ): StorageGui {
-    return StorageGui(rows, title).apply(apply)
+    return Gui.storage().rows(rows).title(title).create().apply(apply)
 }
 
 val BaseGui.items: ItemsContainer
