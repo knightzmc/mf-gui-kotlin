@@ -16,4 +16,8 @@ class ItemsContainer(private val gui: BaseGui) {
     operator fun plusAssign(value: GuiItem) {
         gui.addItem(value)
     }
+
+    fun set(vararg items: Pair<Int, GuiItem>) = items.forEach {
+        gui.setItem(it.first, it.second)
+    }
 }
