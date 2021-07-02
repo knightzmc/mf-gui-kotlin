@@ -4,7 +4,7 @@ plugins {
 }
 
 group 'me.bristermitten'
-version '3.0.1'
+version '3.0.3'
 
 sourceCompatibility = targetCompatibility = JavaVersion.VERSION_1_8
 
@@ -17,7 +17,7 @@ repositories {
 }
 
 dependencies {
-    api 'dev.triumphteam:triumph-gui:3.0.2'
+    api 'dev.triumphteam:triumph-gui:3.0.3'
     compileOnly 'com.destroystokyo.paper:paper-api:1.16.5-R0.1-SNAPSHOT'
 
     testImplementation 'junit:junit:4.12'
